@@ -81,12 +81,14 @@
 ### **6. Mathematical Formulations**
 
 - **Event Generation**:
-  - Polarity change \( p = \text{sign}(\Delta \log I) \), where \( \Delta \log I \) is the logarithmic intensity change.
+  - Polarity change $\( p = \text{sign}(\Delta \log I) \)$, where $\( \Delta \log I \)$ is the logarithmic intensity change.
 - **Histogram of Events**:
+  $$
   \[
   H(x, y) = \sum_k \delta(x - x_k, y - y_k)
   \]
-  - \(H(x, y)\): Event count per pixel.
+  $$
+  - $\(H(x, y)\)$: Event count per pixel.
 
 ### **7. Challenges**
 
