@@ -9,14 +9,14 @@
 - **Core Principle**:
   - Detects changes in light intensity asynchronously for each pixel.
   - Unlike frame-based cameras, outputs data only when a change occurs.
-- **Event Data**: Outputs events $e = (x, y, t, p) $, where:
-  - $ (x, y) $ Pixel coordinates.
-  - $ t $: Timestamp with $\mu s$ precision.
-  - $ p $: Polarity ($+1$ for intensity increase, $-1$ for decrease).
+- **Event Data**: Outputs events $e = (x, y, t, p)$, where:
+  - $(x, y) $ Pixel coordinates.
+  - $t$: Timestamp with $\mu s$ precision.
+  - $p$: Polarity ($+1$ for intensity increase, $-1$ for decrease).
 - **Advantages**:
-  - High temporal resolution ($ \sim 1 \mu s $).
+  - High temporal resolution ($\sim 1 \mu s$).
   - Low latency and minimal motion blur.
-  - High dynamic range (HDR) $ \sim 140 \, dB $.
+  - High dynamic range (HDR) $\sim 140 \, dB$.
   - Sparse output with reduced data redundancy.
   - Energy-efficient (low power consumption).
   - Real-time capabilities ideal for high-speed applications.
