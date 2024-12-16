@@ -71,7 +71,7 @@ where $\sigma^2$ represents noise variance.
    - Converts events into 2D histograms or edge maps:
      - Histograms of event counts.
      - Polarity-based accumulations.
-     - Time surfaces ($T(x, y) = f(\text{time of last event})$).
+     - Time surfaces ( $T(x, y) = f(\text{time of last event})$ ).
 3. **Voxel Grids**:
    - Constructs 3D histograms of events in a space-time volume.
    - Balances memory usage and event fidelity.
