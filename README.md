@@ -2,9 +2,25 @@
 
 🦖 ".. _sssh_ they can't see us if we don't move"
 
-### Summary of Event-Based Vision Notes
+<!-- mtoc-start -->
 
-#### Key Features of Event-Based Cameras
+* [📸 Summary of Event-Based Vision Notes](#-summary-of-event-based-vision-notes)
+  * [Key Features of Event-Based Cameras](#key-features-of-event-based-cameras)
+  * [Mathematical Model for Event Generation](#mathematical-model-for-event-generation)
+  * [Types of Event-Based Sensors](#types-of-event-based-sensors)
+  * [Representations of Event Data](#representations-of-event-data)
+  * [Event Processing Techniques](#event-processing-techniques)
+  * [Applications](#applications)
+  * [Advantages and Challenges](#advantages-and-challenges)
+  * [Future Directions](#future-directions)
+* [🕶️ Awesome EBV](#-awesome-ebv)
+* [🗺️ Research Roadmap](#-research-roadmap)
+
+<!-- mtoc-end -->
+
+## 📸 Summary of Event-Based Vision Notes
+
+### Key Features of Event-Based Cameras
 
 - **Core Principle**:
   - Detects changes in light intensity asynchronously for each pixel.
@@ -21,7 +37,7 @@
   - Energy-efficient (low power consumption).
   - Real-time capabilities ideal for high-speed applications.
 
-#### Mathematical Model for Event Generation
+### Mathematical Model for Event Generation
 
 1. **Trigger Condition**:
 
@@ -50,7 +66,7 @@ where $\mathbf{v}$ Apparent velocity of intensity changes on the image plane.
 
 where $\sigma^2$ represents noise variance.
 
-#### Types of Event-Based Sensors
+### Types of Event-Based Sensors
 
 1. **Dynamic Vision Sensor (DVS)**:
    - Specialized in detecting temporal contrast events.
@@ -62,7 +78,7 @@ where $\sigma^2$ represents noise variance.
    - Merges DVS events with standard frame-based imaging.
    - Outputs: DVS events, grayscale frames, and IMU data.
 
-#### Representations of Event Data
+### Representations of Event Data
 
 1. **Point-Based Representations**:
    - **Space-Time Point Clouds**: Represent events in $x, y, t$ space.
@@ -88,7 +104,7 @@ where $\sigma^2$ represents noise variance.
   - HDR video recovery.
   - Scene understanding.
 
-#### Event Processing Techniques
+### Event Processing Techniques
 
 1. **Event-by-Event Processing**:
    - Processes each event individually, maintaining microsecond latency.
@@ -104,7 +120,7 @@ where $\sigma^2$ represents noise variance.
 3. **Hybrid Representations**:
    - Time surfaces and voxel grids combine advantages of event-by-event and packet processing.
 
-#### Applications
+### Applications
 
 1. **SLAM (Simultaneous Localization and Mapping)**:
    - Combines event data with inertial measurement units (IMUs) for high-speed, HDR mapping.
@@ -117,7 +133,7 @@ where $\sigma^2$ represents noise variance.
 5. **Microscopy**:
    - Tracks rapid biological dynamics, such as neural activity.
 
-#### Advantages and Challenges
+### Advantages and Challenges
 
 **Advantages**:
 
@@ -136,7 +152,7 @@ where $\sigma^2$ represents noise variance.
 - **Hardware Limitations**:
   - Achieving high resolution while retaining low power consumption.
 
-#### Future Directions
+### Future Directions
 
 1. **Algorithmic Development**:
    - Focus on neuromorphic designs mimicking biological systems.
@@ -145,3 +161,12 @@ where $\sigma^2$ represents noise variance.
    - Higher resolutions with efficient processing pipelines.
 3. **Applications in Computational Imaging**:
    - Integrating event cameras with deep learning for end-to-end system optimization.
+
+## 🕶️ Awesome EBV
+
+## 🗺️ Research Roadmap
+
+1. Complete exercises and review notes for TU Berlin course:
+   - https://github.com/tallamjr/tuberlin-ebrv/tree/master
+2. Download sample dataset and run simple event-to-image algorithms
+3. Complete re-write of video-to-event simulator to better understand data.
