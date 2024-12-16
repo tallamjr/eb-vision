@@ -97,7 +97,7 @@ where $\sigma^2$ represents noise variance.
    - Integrates event streams to approximate scene brightness:
 
 ```math
-\log \hat{I}(x, t) = \log I(x, 0) + \sum\_{k} p_k C \delta(x - x_k, t - t_k).
+\log \hat{I}(x, t) = \log I(x, 0) + \sum_k p_k C \delta(x - x_k, t - t_k).
 ```
 
 - Applications:
