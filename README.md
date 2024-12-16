@@ -21,8 +21,6 @@
   - Energy-efficient (low power consumption).
   - Real-time capabilities ideal for high-speed applications.
 
----
-
 #### Mathematical Model for Event Generation
 
 1. **Trigger Condition**:
@@ -41,9 +39,7 @@
 \frac{dL}{dt} = \nabla L \cdot \mathbf{v} + \frac{\partial L}{\partial t} = 0,
 ```
 
-where:
-
-$\mathbf{v}$ Apparent velocity of intensity changes on the image plane.
+where $\mathbf{v}$ Apparent velocity of intensity changes on the image plane.
 
 3. **Noise Model**:
    - Event generation is affected by probabilistic noise:
@@ -52,13 +48,13 @@ $\mathbf{v}$ Apparent velocity of intensity changes on the image plane.
 \Delta L \sim \mathcal{N}(C, \sigma^2),
 ```
 
-     where $\sigma^2$ represents noise variance.
+where $\sigma^2$ represents noise variance.
 
 #### Types of Event-Based Sensors
 
 1. **Dynamic Vision Sensor (DVS)**:
    - Specialized in detecting temporal contrast events.
-   - Resolution ranges from $\(128 \times 128\)$ (early models) to $\(1 \, MP\)$ (modern sensors).
+   - Resolution ranges from $128 \times 128$ (early models) to $1 \, MP$ (modern sensors).
 2. **Asynchronous Time-based Image Sensor (ATIS)**:
    - Combines DVS-like events with grayscale exposure measurements (EM).
    - Provides temporal and intensity data simultaneously.
@@ -69,13 +65,13 @@ $\mathbf{v}$ Apparent velocity of intensity changes on the image plane.
 #### Representations of Event Data
 
 1. **Point-Based Representations**:
-   - **Space-Time Point Clouds**: Represent events in $\(x, y, t\)$ space.
+   - **Space-Time Point Clouds**: Represent events in $x, y, t$ space.
    - Retains spatial and temporal structure.
 2. **Event Frames**:
    - Converts events into 2D histograms or edge maps:
      - Histograms of event counts.
      - Polarity-based accumulations.
-     - Time surfaces ($\( T(x, y) = f(\text{time of last event}) \)$).
+     - Time surfaces ($T(x, y) = f(\text{time of last event})$).
 3. **Voxel Grids**:
    - Constructs 3D histograms of events in a space-time volume.
    - Balances memory usage and event fidelity.
@@ -83,12 +79,14 @@ $\mathbf{v}$ Apparent velocity of intensity changes on the image plane.
    - Aligns events based on motion hypotheses for sharper edge representation.
 5. **Reconstructed Intensity Images**:
    - Integrates event streams to approximate scene brightness:
-     ```math
-     \log \hat{I}(x, t) = \log I(x, 0) + \sum\_{k} p_k C \delta(x - x_k, t - t_k).
-     ```
-   - Applications:
-     - HDR video recovery.
-     - Scene understanding.
+
+```math
+\log \hat{I}(x, t) = \log I(x, 0) + \sum\_{k} p_k C \delta(x - x_k, t - t_k).
+```
+
+- Applications:
+  - HDR video recovery.
+  - Scene understanding.
 
 #### Event Processing Techniques
 
@@ -100,7 +98,7 @@ $\mathbf{v}$ Apparent velocity of intensity changes on the image plane.
    - **Pros**: Minimal latency, high temporal precision.
    - **Cons**: Computationally expensive for high event rates.
 2. **Event Packets**:
-   - Groups $\(N\)$ events into packets for batch processing.
+   - Groups $N$ events into packets for batch processing.
    - Aggregation strategies include fixed time intervals or adaptive thresholds.
    - Suitable for real-time tasks with reduced computational overhead.
 3. **Hybrid Representations**:
