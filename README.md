@@ -10,7 +10,7 @@
   - Detects changes in light intensity asynchronously for each pixel.
   - Unlike frame-based cameras, outputs data only when a change occurs.
 - **Event Data**: Outputs events $e = (x, y, t, p)$, where:
-  - $(x, y) $ Pixel coordinates.
+  - $(x, y)$ Pixel coordinates.
   - $t$: Timestamp with $\mu s$ precision.
   - $p$: Polarity ($+1$ for intensity increase, $-1$ for decrease).
 - **Advantages**:
@@ -26,23 +26,32 @@
 #### Mathematical Model for Event Generation
 
 1. **Trigger Condition**:
-   ```math
-   \Delta L = \log I(x, t) - \log I(x, t - \Delta t) = \pm C
-   ```
-   - $\Delta L$: Log intensity change.
-   - $ C $: Contrast threshold triggering the event.
+
+```math
+\Delta L = \log I(x, t) - \log I(x, t - \Delta t) = \pm C
+```
+
+- $\Delta L$: Log intensity change.
+- $C$: Contrast threshold triggering the event.
+
 2. **Brightness Constancy Equation**:
    - Events align with gradients of intensity changes over time:
-     ```math
-     \frac{dL}{dt} = \nabla L \cdot \mathbf{v} + \frac{\partial L}{\partial t} = 0,
-     ```
-     where:
-     $\mathbf{v}$ Apparent velocity of intensity changes on the image plane.
+
+```math
+\frac{dL}{dt} = \nabla L \cdot \mathbf{v} + \frac{\partial L}{\partial t} = 0,
+```
+
+where:
+
+$\mathbf{v}$ Apparent velocity of intensity changes on the image plane.
+
 3. **Noise Model**:
    - Event generation is affected by probabilistic noise:
-     ```math
-     \Delta L \sim \mathcal{N}(C, \sigma^2),
-     ```
+
+```math
+\Delta L \sim \mathcal{N}(C, \sigma^2),
+```
+
      where $\sigma^2$ represents noise variance.
 
 #### Types of Event-Based Sensors
